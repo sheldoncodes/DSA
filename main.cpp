@@ -18,5 +18,7 @@ int main() {
   long int li;
   cout<<"size of long int"<<sizeof(li)<<endl;
   cout<<"size of short int"<<sizeof(si)<<endl;
+  cout<<"newline added and checking version control";
+  
 
 } 
