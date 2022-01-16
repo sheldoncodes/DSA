@@ -8,7 +8,7 @@ int main(){
         if(n%i==0){
             cout<<"not prime"<<endl;
             break;
-        }66
+        }
     }
     if(i==n){
         cout<<"prime";
