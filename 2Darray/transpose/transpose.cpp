@@ -15,3 +15,11 @@ int main(){
         }cout<<endl;
     }
 }
+// transpose method 2 better
+for(int i=0;i<3;i++){
+    for(int j=i;j<3;j++){
+        int temp=arr[i][j];
+        arr[i][j]=arr[j][i];
+        arr[j][i]=temp;
+    }
+}
