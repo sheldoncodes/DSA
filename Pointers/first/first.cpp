@@ -18,7 +18,7 @@ int main(){
     // cout<<&a<<" ";
     // cout<<*aptr<<" ";
     // cout<<&*aptr<<" ";
-    // int arr[3]={11,22,33};
+    // int arr[3]={11,22,33}; 
     // //cout<<*arr<<endl;
     // //cout<<arr<<endl;
     // int *bptr;
