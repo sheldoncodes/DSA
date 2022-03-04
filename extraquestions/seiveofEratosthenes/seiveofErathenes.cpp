@@ -1,4 +1,6 @@
 #include<iostream>
+// print all prime no upto n
+// we will mark the multiple of all prime no which come
 using namespace std;
 
 void primeseive(int n){
