@@ -124,5 +124,182 @@ for( i=2;i<=a;i++){
     }
     }*/
     
-    return 0;
-}
+    // Online C++ compiler to run C++ program online
+
+
+
+ // Write C++ code here
+ // odd number till n   cout << "Hello world!";
+   int n;
+   int m;
+  bool b;
+  
+   /* for(int i=1;i<=n;i++){
+        if(!(i%2==0)){
+            cout<<i<<" ";
+        }
+    }
+    */
+    
+    
+    // prime or not
+   /* b=false;
+    for(int i=2;i<sqrt(n);i++){
+        if(n%i==0){
+            b=true;
+            break;
+        }
+    }
+    if(b){
+        cout<<"not prime";
+    }else{
+        cout<<"prime";
+    }
+    */
+    
+    
+    
+    //prime in a given range
+  /*  cin>>m;
+    for(int i=n;i<=m;i++){
+       int j;
+        for(j=2;j<i;j++){
+            if(i%j==0){
+                break;
+            }
+        }if(j==i){
+            cout<<i<<" ";
+        }
+    }
+    */
+    
+    // simple calculator using switch
+  /*  cin>>m;
+    char op;
+    cin >>op;
+    switch(op){
+        case '+':
+        cout<<n+m;
+        break;
+        case '-':
+        cout<<n-m;
+        break;
+        default:
+        cout<<"invalid";
+        break;
+    }
+           */
+/* solid rectangle      
+     cin>>n>>m;
+     for(int i=0;i<n;i++){
+         for(int j=0;j<m;j++){
+             cout<<"*";
+         }
+         cout<<endl;
+     }
+     */
+  /*   hollow rectangle
+        cin>>n>>m;
+     for(int i=1;i<=n;i++){
+         for(int j=1;j<=m;j++){
+             if ( i==1 || i == n || j==1 || j== m){
+                 cout<<"*";
+             }else{
+                 cout<<" ";
+             }
+         }cout<<endl;
+     }
+*/
+
+//  half pyramid
+ /* cin>>n;
+  for(int i=1;i<=n;i++){
+      for(int j=1;j<=i;j++){
+          cout<<"*";
+      }cout<<endl;
+  }*/
+  
+  // inverted half pyramid
+ 
+  /*  cin>>n;
+    for(int i=n;i>=1;i--){
+        for(int j=1;j<=i;j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+ */
+ 
+ // half pyramid after 180 degree rotation
+/* cin>>n;
+ for(int i=1;i<=n;i++){
+     for(int j=1;j<=n;j++){
+        if (j <= n-i){
+            cout<<"#";
+        }else{
+            cout<<"*";
+        }
+        }cout<<endl;
+ }*/
+ 
+ //half pyramid using numbers
+ /* cin>>n;
+  for(int i=1;i<=n;i++){
+      for(int j=1;j<=i;j++){
+          cout<<j;
+      }cout<<endl;
+  }*/
+
+
+//inverted half pyramid
+ /*cin>>n;
+ for(int i=n;i>=1;i--){
+     for(int j=1;j<=i;j++){
+         cout<<j;
+         
+     }cout<<endl;
+ }*/
+ 
+ // half pyramid using number 2
+ 
+ /*cin>>n;
+ for(int i=1;i<=n;i++){
+     for(int j=1;j<=i;j++){
+         cout<<i;
+         
+     }cout<<endl;
+ }*/
+ 
+ // inverted half pyramid using numbers 2
+ /*cin>>n;
+ for(int i=1;i<=n;i++){
+     for(int j=1;j<=n-i+1;j++){
+         cout<<i;
+         
+     }cout<<endl;
+ }*/
+ 
+// print(floyds triangle)
+/*cin>>n;
+int k=1;
+for(int i =1;i<=n;i++){
+    for(int j=1;j<=i;j++){
+        cout<<k<<" ";
+        k++;
+    }cout<<endl;
+}*/
+
+//print 0 1 pattern
+/*cin>>n;
+for(int i=1;i<=n;i++){
+    for(int j=1;j<=i;j++){
+        if ((i+j)%2==0){
+            cout<<1;
+        }else{
+            cout<<0;
+        }
+    }cout<<endl;
+}*/
+
+//palindromic pattern
+
