@@ -302,4 +302,68 @@ for(int i=1;i<=n;i++){
 }*/
 
 //palindromic pattern
+    
+        
+      //solid diamond
+      
+    //space
+ /*   int space=(2*n-1)/2;
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=space;j++){
+            cout<<" ";
+        }
+        for(int j=1;j<=2*i-1;j++){
+            cout<<"*";
+        }
+        cout<<endl;
+        space--;
+        
+    }
+    space=0;
+    for(int i=n;i>=1;i--){
+        for(int j=1;j<=space;j++){
+            cout<<" ";
+        }
+        for(int j=1;j<=2*i-1;j++){
+            cout<<"*";
+        }
+        cout<<endl;
+        space++;
+    }*/
+    
+    //hollow diamond
+ /*   int space=(2*n-1)/2;
+    for(int i=1;i<=n;i++){
+        //spaces
+        for(int j=1;j<=space;j++){
+            cout<<"#";
+        }
+        //stars
+        for(int j=1;j<=2*i-1;j++){
+            if(j==1 || j==2*i-1){
+                cout<<"*";
+            }else{
+                cout<<"#";
+            }
+        }space--;
+        cout<<endl;
+    }
+    // lower half
+    space=0;
+    for(int i=n;i>=1;i--){
+        for(int j=1;j<space;j++){
+            cout<<"#";
+        }
+        for(int j=1;j<=2*i-1;j++){
+            if(j==1 || j==2*i-1){
+                cout<<"*";
+            }else{
+                cout<<"#";
+            }
+        }
+        cout<<endl;
+        space++;
+    }
+        
+    */
 
