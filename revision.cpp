@@ -366,4 +366,34 @@ for(int i=1;i<=n;i++){
     }
         
     */
+        //solid rhombus
+   /* for(int i=1;i<=n;i++){
+        //spaces
+        for(int j=1;j<=n-i;j++){
+            cout<<"#";
+        }
+        for(int j=1;j<=n;j++){
+            
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+    
+    //hollow rhombus
+    for(int i=1;i<=n;i++){
+        //spaces
+        for(int j=1;j<=n-i;j++){
+            cout<<"#";
+        }
+        for(int j=1;j<=n;j++){
+            if(j==1 || j==n || i==1|| i==n){
+            
+            cout<<"*";
+        }
+            else{
+                cout<<"#";
+            }
+        }
+        cout<<endl;
+    }*/
 
