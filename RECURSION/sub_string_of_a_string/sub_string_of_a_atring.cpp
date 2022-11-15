@@ -13,6 +13,7 @@ void allsubstring(string s,string ans){
     
 }
 // this function will print sub string with their ascii value
+//change something
 void subseq(string s,string ans){
     if(s.length()==0){
         cout<<ans<<endl;
