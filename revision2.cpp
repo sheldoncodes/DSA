@@ -2,6 +2,57 @@
 #include<climits>
 using namespace std;
 
+int add(int num1, int num2){
+    int sum = num1 + num2;
+    return sum;
+}
+
+int factorial(int n){
+    int res =1; 
+    for(int i = 1 ;i<=n;i++){
+        res = res * i;
+    }
+    return res;
+    }
+int binarycoff(int n , int r){
+    int res = factorial(n)/(factorial(r)*factorial(n-r));
+    return res ;
+}
+int SumOfFirstN(int n){
+    int res = 0;
+    while (n>0){
+        res = res + n;
+        n -=1;
+    }
+    return res;
+}
+
+bool PythagoreanTriplet(int a , int b , int c){
+    
+    int y,z;
+    int x  = max(a,max(b,c));
+    if(x == a){
+        y= b;
+        z = c;
+    }else if( x == b){
+        y = a;
+        z = c;
+    }else{
+        y =a ;
+        z = b;
+    }
+    if(x*x == y*y + z*z){
+        return true;
+    }
+    else {
+        return false;
+    }
+    
+
+}
+
+
+
 int main() {
 
     // topic 1 and 2
@@ -266,7 +317,7 @@ for(int i =1;i<=n;i++){
 }*/
 
 //inverted half pyramid
-int n = 7;
+//int n = 7;
 /*
 for(int i = 1;i<=n;i++){
     for(int j = 1 ; j <=n-i+1;j++  ){
@@ -316,9 +367,129 @@ for(int i=1;i<=n;i++){
 // palindromic pattern
 
 
-
-
-
-
+/*
+int n = 47;
+bool status = false;
+for(int i=2;i<=n/2 ;i++){
+    if(n%i==0){
+        status = true;
+        cout<<i;
+        break;
+    }
 
 }
+if(status){
+    cout<<"not a prime";
+}
+else{
+    cout<<"prime";
+}
+*/
+
+//print all digit of a decimal number from left to right
+
+/*
+int n = 4567345;
+while(n>0){
+
+
+    int rem = n%10;
+    cout<<rem<<"\n";
+    n = n/10;
+
+    CHECK IF A NUMBER IS ARMSTRONG OR NOT
+
+
+int n = 153;
+int temp = n;
+int check = 0;
+while (n>0){
+  int rem = n%10;
+  check = check + (rem*rem*rem);
+    n=n/10;
+
+}
+if (check == temp){
+    cout<<"i am armstrong";
+}else{
+    cout<<"i am not armstrong";
+}
+
+FACTORIAL OF A NUMBER
+
+
+
+// int n =7;
+int result = 1;
+while (n>0){
+result = result *n;
+n = n-1;
+}
+cout<<result;
+
+print first n terms of fibonacci
+
+
+
+int n = 10;
+if(n==1){
+    cout<<"0";
+
+}else if(n == 2 ){
+    cout<<"0"<<" "<<1;
+}else{
+    int a = 0;
+    int b = 1;
+    cout<<a <<" "<<b<<" ";
+    for(int i = 3;i<=n;i++){   // 0 1 1 2 3 5
+        int temp = a + b;
+        cout<< temp <<" ";
+        a = b;
+        b = temp;
+    }
+}
+
+REVERSE A NUMBER
+
+
+
+int n = 78483;
+int reverse = 0;
+int mul = 10;
+while (n>0){
+ int rem =  n%10;
+ n = n/10;
+
+ reverse = reverse * mul + rem;
+
+}
+cout<<reverse;
+
+
+display all factors
+
+
+int n = 100;
+int sqrt = 10;
+for(int i = 2;i<=sqrt;i++){
+    if(n%i== 0 ){
+        cout<<i<<" ";
+        cout<< n/i<<" ";
+
+    }
+}
+
+BINARY COFFICIENT
+NCR = N!/(N-R)!
+
+
+
+int re = binarycoff(6,3);
+cout<<re;
+*/
+
+cout<<PythagoreanTriplet(5,13,4);
+}
+
+
+
