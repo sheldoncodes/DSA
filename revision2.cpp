@@ -2,6 +2,32 @@
 #include<climits>
 using namespace std;
 
+int decimaltobinary(int n){
+    int mul =1 ;
+    int res= 0;
+    while(n>1){
+        int rem = n%2;
+        res = res + rem * mul;
+        mul = mul * 10;
+        n= n/2;
+    }
+    return res;
+}
+
+int Binarytodecimal(int n){
+
+    int mul = 1;
+    int res = 0;
+    while(n>0){
+        int rem = n%10;
+       res = res + rem*mul;
+        mul  = mul * 2;
+        n = n /10;
+
+    }
+    return res;
+}
+
 int add(int num1, int num2){
     int sum = num1 + num2;
     return sum;
@@ -488,7 +514,9 @@ int re = binarycoff(6,3);
 cout<<re;
 */
 
-cout<<PythagoreanTriplet(5,13,4);
+//cout<<PythagoreanTriplet(5,13,4);
+//cout<<Binarytodecimal(110101);
+cout<<decimaltobinary(4534);
 }
 
 
