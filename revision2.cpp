@@ -3,13 +3,14 @@
 using namespace std;
 
 int decimaltobinary(int n){
-    int mul =1 ;
-    int res= 0;
-    while(n>1){
-        int rem = n%2;
-        res = res + rem * mul;
+    int res = 0;
+    int mul = 1;
+    
+    while(n!=0){
+        int bit = n & 1;
+        n = n>>1;
+        res = res + bit * mul;
         mul = mul * 10;
-        n= n/2;
     }
     return res;
 }
@@ -516,7 +517,7 @@ cout<<re;
 
 //cout<<PythagoreanTriplet(5,13,4);
 //cout<<Binarytodecimal(110101);
-cout<<decimaltobinary(4534);
+cout<<decimaltobinary(10000);
 }
 
 
