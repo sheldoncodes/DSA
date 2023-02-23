@@ -1,6 +1,45 @@
 #include <iostream>
 #include<climits>
+#include<bits/stdc++.h>
+
 using namespace std;
+
+int hexadecimaltodecimal(string n){
+
+    int ans= 0;
+    int x = 1;
+    int s = n.size();
+
+    for(int i = s-1;i>=0;i--){
+        if(n[i]>='0' && n[i]<='9'){
+            ans = ans + (n[i]-'0')*x;
+          
+        }else if(n[i]>='A' && n[i]<='F'){
+            ans = ans + (n[i]-'A'+10)*x;
+           
+        }
+          x=x*16;
+    }
+    return ans;
+
+
+
+}
+
+
+int octaltodecimal(int n){
+    int res = 0;
+    int mul = 1;
+    while (n>0){
+        int rem = n%10;
+        res = res + rem * mul;
+        mul = mul * 8;
+        n = n/10;
+
+    }
+
+    return res;
+}
 
 int decimaltobinary(int n){
     int res = 0;
@@ -517,7 +556,12 @@ cout<<re;
 
 //cout<<PythagoreanTriplet(5,13,4);
 //cout<<Binarytodecimal(110101);
-cout<<decimaltobinary(10000);
+//cout<<decimaltobinary(10000);
+//cout<<octaltodecimal(17);
+//cout<<('9'-'1');
+//cout<<hexadecimaltodecimal("1CF"); 
+
+
 }
 
 
