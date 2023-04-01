@@ -560,9 +560,179 @@ cout<<re;
 //cout<<octaltodecimal(17);
 //cout<<('9'-'1');
 //cout<<hexadecimaltodecimal("1CF"); 
+/*
+int n = 1010;
+int res = 0;
+int mul = 1;
 
+while(n>0){
+    int rem =  n % 10;
+    res = res + rem * mul;
+    mul = mul * 2;
+    n=n/10;
 
 }
+cout<< res;
+
+//octadecimalto decimal
+int n = 1234567;
+int res = 0;
+int mul =1;
+while (n>0){
+    int rem = n % 10;
+    res = res + rem * mul;
+    mul = mul * 8;
+    n = n/10;
+}
+
+cout << res;
+*/
+/*
+string hexno = "123FC";
+int res = 0;
+int mul = 1;
+for(int i = hexno.length()-1;i>=0 ;i--){
+    if(hexno[i]>='0' && hexno[i]<='9'){
+        res = res + mul*(hexno[i]-'0');
+        mul = mul * 16;
+    }
+    else if( hexno[i]>='A' && hexno[i]<='F'){
+        res = res + (hexno[i]-'A'+10)*mul;
+        mul = mul * 16;
+    }
+}
+cout<<res;
+
+
+
+int arr[6] ={1,2,3,33,22,12,34,4,11,9};
+
+for(int i = 0;i<6;i++){
+
+cout<<arr[i]<<",";
+}
+int maxno = arr[0];
+for(int i =0;i<6;i++){
+    maxno = max(maxno , arr[i]);
+}
+cout<<" max no is this :"<<maxno;
+
+
+
+int arr[10] ={1,2,3,33,22,12,34,4,11,9};
+//selection sort
+
+for(int i = 0 ;i<10;i++){
+    for(int j = i+1;j<10;j++){
+        if(arr[i]>arr[j]){
+            int temp = arr[i];
+            arr[i]= arr[j];
+            arr[j]= temp;
+        }
+    }
+}
+//bubble sort
+int arr[10] ={1,2,3,33,22,12,34,4,11,9};
+int counter = 0;
+while (counter<10){
+    for(int i = 0;i<10-counter-1;i++){
+        if(arr[i]>arr[i+1]){
+            int temp = arr[i];
+            arr[i]=arr[i+1];
+            arr[i+1]=temp;
+        }for(int i = 0 ;i<10;i++){
+    cout<<arr[i]<<" ";
+   
+    }
+     cout<<endl;
+    }
+    counter++;
+}
+
+int arr[10] ={1,2,3,33,22,12,34,4,11,9};
+
+for (int i = 1;i<10;i++){
+    int current = arr[i];
+    int j = i-1;
+    while(arr[j]>current && j>=0){
+        arr[j+1]=arr[j];
+        j--;
+    }
+    for(int i = 0 ;i<10;i++){
+    cout<<arr[i]<<" ";
+   
+    }
+  
+    cout<<"current element is :"<<current <<"  j ="<<arr[j];
+      cout<<endl;
+
+    arr[j+1]=current;
+}
+for(int i = 0 ;i<10;i++){
+    cout<<arr[i]<<" ";
+}
+
+int arr[10] ={1,2,3,33,22,12,34,4,11,9};
+// shilt and put at correct position
+for(int i = 1 ; i<10;i++){
+   int  temp = arr[i];
+
+    for(int j = i-1;j>=0;j--){
+        if(temp<arr[j]){
+            arr[j]=temp;
+
+        }
+    }
+}
+int a = 2;
+int b = a+1;
+if((a=3)==b){
+    cout<<a;
+
+}else{
+    cout<<a+1;
+}
+
+char ch = 'D';
+if(ch>=97 && ch<=122){
+    cout<<"it is smaller";
+}
+else if (ch>=65 && ch<=90){
+    cout<<"it is larger";
+}
+int n = 233;
+int counter = 1;
+int sum = 0;
+
+while(counter<=n){
+    sum = sum + counter;
+    counter = counter+2;
+}
+cout<<counter;
+
+int n = 3;
+int o = 0;
+int reverse = n*n;
+
+int counter = 1;
+ while (o<n){
+
+   int i = 0;
+    while (i < n){
+        cout<< reverse << " ";
+        reverse --;
+        i++;
+    }
+    o++;
+    cout<< endl;
+ }
+ */
+}
+
+
+
+
+
 
 
 
