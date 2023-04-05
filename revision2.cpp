@@ -1,6 +1,7 @@
 #include <iostream>
 #include<climits>
 #include<bits/stdc++.h>
+#include<math.h>
 
 using namespace std;
 
@@ -726,13 +727,469 @@ int counter = 1;
     o++;
     cout<< endl;
  }
- */
+ 
+int n = 4;
+int counter = 1;
+while (counter <=n){
+    int start = counter;
+    while (start<=counter+counter-1){
+        cout<< start <<" ";
+        start++;
+    }
+    counter++;
+    cout<<endl;
+}
+
+1 
+2 1
+3 2 1
+4 3 2 1 
+
+
+
+int n = 15;
+int i = 1;
+while (i<=n){
+
+    int j = i;
+    while(j>0){
+        cout<<j<<" ";
+        j--;
+    }
+    i++;
+    cout<<endl;
+}
+
+int n = 5;
+int i=0;
+
+
+while(i<n){
+    char ch = i+65;
+    int j =0;
+    while(j<n){
+        
+        cout<<ch;
+      
+        j++;
+    }
+    cout<<endl;
+    i++;
+}
+
+int n = 7;
+int i = 0;
+while(i<n){
+    
+    int j =0;
+    while(j<n){
+        char ch ='A' + j;
+        cout<<ch;
+
+        j++;
+    }
+    cout<<endl;
+    i++;
+}
+
+int n = 4;
+int start = 0;
+int i = 1;
+char ch = 'A';
+while(i<=4){
+    int j = 0;
+    while(j<n){
+        ch = 'A' +start;
+        start++;
+        cout<<ch<<" ";
+        j++;
+    }
+    cout<<endl;
+    i++;
+}
+
+int n = 3;
+int i = 0;
+while(i<n){
+    
+    int j = 0;
+    while (j<n){
+        char ch  = 'A'+i +j;
+        cout<<ch;
+        j++;
+    }
+    cout<<endl;
+    i++;
+}
+
+int n = 3;
+int i = 0;
+while(i<n){
+    int j = 0;
+    while(j<=i){
+        char ch = 'A' +i;
+        cout<<ch;
+        j++;
+    }
+    cout<<endl;
+    i++;
+}
+
+int n = 6;
+int i = 0;
+ while(i<n){
+    int j =0;
+    char ch = 'A' + i;
+    while(j<=i){
+        ch = ch +j;
+        cout<< ch;
+        j++;
+    }
+    cout<<endl;
+    i++;
+ }
+
+int n = 4;
+int i = 0;
+ while(i<n){
+    int j =0;
+    
+    while(j<=i){
+        char ch = 'A' + n-1-j;
+        cout<< ch;
+        j++;
+    }
+    cout<<endl;
+    i++;
+ }D
+CD
+BCD
+ABCD
+ }
+  
+int n = 4;
+int i = 1;
+ while(i<=n){
+    int j =1;
+    char ch = 'A'+n-i;
+    while(j<=i){
+        
+        cout<< ch;
+        ch = ch +1;
+        j++;
+    }
+    cout<<endl;
+    i++;
+ }
+ 
+int n = 4;
+int i = 1;
+while(i<=n){
+    //print space
+    int j = n;
+    while(j>i){
+        cout<<" ";
+        j--;
+    }
+    //print stars;
+    int k = 1;
+    while(k<=i){
+        cout<<"*";
+        k++;
+    }i++;
+    cout<<endl;
+}
+
+int n = 4;
+int i = 1;
+while(i<=n){
+    int j = 1;
+    while(j<=n-i+1){
+        cout<<"*";
+        j++;
+    }
+    cout<<endl;
+    i++;
+}
+
+int n = 4;
+int i = 1;
+while(i<=n){
+  // print space
+  int j = 1;
+  while(j<i){
+    cout<<" ";
+    j++;
+  }
+  //print star
+  int k = 1;
+  while(k<=n-i+1){
+    cout<<"*";
+    k++;
+
+  }
+  cout<<endl;
+  i++;
+
+
+}
+
+int n = 4;
+int i = 1;
+while(i<=n){
+    //print space
+    int j= 1;
+    while(j<i){
+        cout<<" ";
+        j++;
+    }
+
+    //print number
+
+    int k = 1;
+    while (k<=n-i+1){
+        cout<<i;
+        k++;
+    }
+    i++;
+    cout<<endl;
+
+
 }
 
 
+int n = 4;
+int i = 1;
 
 
+    //print space
+    while(i<=n){
+    int k = 1;
+    while (k<n-i+1){
+        cout<<" ";
+        k++;
+    }
+
+    
+    //print number
+    int j= 1;
+    while(j<=i){
+        cout<<i;
+        j++;
+    }
+    i++;
+    cout<<endl;
 
 
+}
 
 
+int n = 4;
+int i=1;
+while(i<=n){
+    //print space
+    int j = 1;
+    while(j<i){
+        cout<<" ";
+        j++;
+
+    }
+    //print number
+    int k = i;
+    while(k<=n){
+        cout<<k;
+        k++;
+    }
+    i++;
+    cout<<endl;
+    
+}
+
+int n = 4;
+int counter =1 ;
+int i = 1;
+while(i<=n){
+    // for columns
+    // print space
+    int j = 1;
+    while(j<=n-i){
+        cout<<"*";
+        j++;
+
+    }
+    //print numbers
+    int k =1;
+    while(k<=i){
+        cout<<counter;
+        counter++;
+        k++;
+    }
+    cout<<endl;
+    i++;
+
+}
+
+// tough question
+int n = 4;
+// three portion
+int i = 1;
+while(i<=n){
+    int j=1;
+    //print space
+    while(j<=n-i){
+        cout<<"-";
+        j++;
+    }
+    //print left triangle
+    int k = 1;
+    while(k<=i){
+        cout<<k;
+        k++;
+    }
+    //print right traingle
+    int l = i-1;
+    while(l>0){
+        cout<<l;
+        l--;
+
+    }
+    i++;
+    cout<<endl;
+   
+
+}
+
+ 
+// dabangg pattern
+
+int n = 5;
+int i = 1;
+while (i<= n){
+    //first triangle
+    int j = 1;
+    while(j<=n-i+1){
+        cout<<j;
+        j++;
+    }
+    //middle triangle
+    int k = 1;
+    while(k<=2*(i-1)){
+        cout<<"*";
+        k++;
+
+    }
+    //last triangle
+    int l = n-i+1;
+    while(l>=1){
+        cout<<l;
+        l--;
+    }
+    i++;
+    cout<<endl;
+}
+
+for(int i = 0;i<=15;i+=2){
+    cout<<i;
+    if(i&1){
+        continue;
+    }
+    i++;
+}
+
+
+signed int m =31;
+cout<<m<<endl;
+signed int c = -21;
+cout<<c<<endl;
+unsigned int k = 9;
+cout<<k<<endl;
+unsigned int l = -1;
+cout<<l<<endl;
+cout<<-134%10;
+cout<<-134/10;
+
+int n;
+cin>>n;   //4321 reverse
+
+int ans = 0;   
+int i = 0;
+while(n!=0){
+    int digit = n&1;
+    n=n>>1;
+  //  ans = digit+(ans*pow(10,i));
+    ans = digit*pow(10,i) +ans;
+ // ans = ans + digit*pow(10,i);
+    i++;
+}
+cout<<"binary of "<<n<<" is " <<ans;
+
+int n;
+cin>>n;   //4321 reverse
+
+int ans = 0;   
+int i = 0;
+while(n!=0){
+    int rem = n%2;
+    n=n/2;
+   
+  //  ans = digit+(ans*pow(10,i));
+    ans = rem*pow(10,i) +ans;
+ // ans = ans + digit*pow(10,i);
+    i++;
+}
+cout<<"binary of "<<n<<" is " <<ans;
+
+int n;
+cin>>n;  
+int ans = 0;
+int i = 0;
+while(n!=0){
+    int digit = n%10;
+    ans = digit*pow(2,i) + ans;
+    i++;
+    n = n/10;
+
+}
+cout<<ans;
+
+
+int money = 1332;
+int note100 ;
+int note50 ;
+ int note20 ;
+int note1 ;
+
+switch (1)
+{
+case 1:
+    note100 = money/100;
+   
+    money  = money - (note100*100);
+   
+    /* code */
+case 2:
+    note50 = money/50;
+    money  = money - (note50*50);
+    /* code */
+case 3:
+    note20 = money/20;
+    money  = money - (note20*20);
+    /* code */
+case 4:
+    note1 = money/1;
+    money  = money - (note1*1);
+    /* code */
+   
+
+default:
+cout<<"note100:"<< note100 <<endl;
+cout<<"note50:"<< note50 <<endl;
+cout<<"note20:"<< note20 <<endl;
+cout<<"note1:"<< note1 <<endl;
+    break;
+*/
+
+*/
+
+
+}
