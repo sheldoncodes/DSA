@@ -5,6 +5,133 @@
 
 using namespace std;
 
+
+int binarySearch(int arr[], int n, int key){
+    int start = 0;
+    int end = n-1;
+    while(start<=end){
+        int middle = (start + end);
+        if(key == arr [middle]){
+            return middle;
+        }
+        else if(key>arr[middle]){
+            start = middle+1;
+            
+        }else {
+            end = middle-1;
+        }
+    } return -1;
+}
+
+void sort012(int arr[], int n){
+// [0 1 2 0 1 2 0 1 2 0]
+int low = 0;
+int mid = 0 ;
+ int high = n-1;
+
+while(mid<=high){
+    if(arr[mid]==0){
+        swap(arr[low],arr[mid]);
+        mid++;
+        low++;
+    }
+    else if(arr[mid]==1 ){
+     mid++;
+    }
+    else if(arr[mid]== 2){
+        swap(arr[high],arr[mid]);
+        high--;
+       
+    }
+    
+    
+    
+}
+
+}
+
+void sort01(int arr[], int n ){
+    int left = 0;
+    int right = n-1;    
+    while(left<right){
+
+        while(arr[left]==0){
+            left++;
+        }
+        while(arr[right]==1){
+            right--;
+        }
+
+        //now we have arr[left]==2 and arr[right]=0;
+        if(arr[left]==1 && arr[right]==0 && left<right){
+        swap(arr[left],arr[right]);
+        left++;
+        right--;
+        }
+    }
+}
+int findDublicate(int arr[],int n){
+     int test[100000]={0};
+    for(int i = 0;i<n;i++){
+       if(test[arr[i]]==0){
+           test[arr[i]]=test[arr[i]]+1;
+       }else{
+return arr[i];
+       }
+       
+          
+        }
+        return 0;
+}
+
+void swapAlternate(int arr[], int n){
+    for(int i = 0;i<n-1;i+=2){
+        swap(arr[i],arr[i+1]);
+    }
+}
+
+void reverseArray(int arr[],int n){
+    for(int i= 0;i<n/2;i++ ){
+        int temp = arr[i];
+        arr[i]= arr[n-i-1];
+        arr[n-i-1]= temp;
+    }
+    return;
+}
+void printArray(int arr[],int n){
+    for(int i =0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+}
+
+string linearSearch(int arr[],int n,int element){
+    for(int i =0;i<n;i++){
+        if(arr[i]==element){
+
+            return ("element found at index :"+ to_string(i));
+        }
+      
+    }
+      return "element not found";
+}
+
+
+int sumOfArray(int arr[], int n){
+    int sum =0;
+    for(int i = 0;i<n;i++){
+        sum+= arr[i];
+    }
+return sum;
+}
+
+void takeInput(int arr[], int n){
+    cout<<"enter "<<n<<" values seperated by space "; 
+    for(int i = 0;i<n;i++){
+        cin>>arr[i];
+    }
+}
+
 int hexadecimaltodecimal(string n){
 
     int ans= 0;
@@ -1166,19 +1293,19 @@ case 1:
    
     money  = money - (note100*100);
    
-    /* code */
+  
 case 2:
     note50 = money/50;
     money  = money - (note50*50);
-    /* code */
+   
 case 3:
     note20 = money/20;
     money  = money - (note20*20);
-    /* code */
+   
 case 4:
     note1 = money/1;
     money  = money - (note1*1);
-    /* code */
+    
    
 
 default:
@@ -1187,9 +1314,32 @@ cout<<"note50:"<< note50 <<endl;
 cout<<"note20:"<< note20 <<endl;
 cout<<"note1:"<< note1 <<endl;
     break;
-*/
 
-*/
+
+
+int arr[14] = {1,2,3,4,5,6,7,-3,-9,-6,-1,-10,11,12};
+int arr01[10] ={0,0,0,0,0,1,1,1,1,1};
+int arr012[10]={0,1,2,0,1,2,0,1,2,0};
+//sort01(arr01,10);
+//printArray(arr01,10);  
+sort012(arr012,10);
+printArray(arr012,10); 
+
+
+///binary search tested;
+int arr[7]= {3,7,11,13,19,27,31};
+cout<<binarySearch(arr,7,31);
+cout<<binarySearch(arr,7,27);
+cout<<binarySearch(arr,7,19);
+cout<<binarySearch(arr,7,13);
+cout<<binarySearch(arr,7,11);
+cout<<binarySearch(arr,7,7);
+cout<<binarySearch(arr,7,3);
+cout<<binarySearch(arr,7,-3);
+
+*/ 
+
+
 
 
 }
