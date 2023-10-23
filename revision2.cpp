@@ -4,13 +4,110 @@
 #include<math.h>
 
 using namespace std;
+int sqrtint(int x){
+        int s = 0;
+        int e = x;
+        long long int ans = -1;
+        long long int mid = s+(e-s)/2;
+        while(s<=e){
+            if(x == mid * mid){
+                return mid;
 
+            }else if ( mid * mid > x ){
+                e = mid -1;
+            }
+            else {
+                    ans = mid;
+                    s = mid + 1;
+            }
+            mid = s + (e-s)/2;
+  }
+   
+   return ans;
+ }
+
+double sqrtprecision(int n , int precision){
+    int squareroot = sqrtint(n);
+    double fact = 1;
+    double ans = squareroot;
+    for(int i = 0;i<precision;i++){
+        fact = fact /10;
+        for(double j = ans;j*j<n;j+=fact){
+            
+            ans = j;
+        }
+    }
+
+return ans;
+
+}
+
+int getPivot(int arr[], int n ){
+      int s = 0;
+      int e = n - 1;
+       int mid = s +(e-s)/2;
+       while(s<e){
+        if(arr[mid]>=arr[0]){
+            s = mid + 1;
+        }else {
+            e = mid;
+        }
+         mid = s +(e-s)/2;
+
+       }
+
+       return s;
+
+}
+
+int firstOccurence(int arr[],int n , int key){
+    int start = 0 ;
+    int end  = n-1;
+    int mid = (start + end)/2;
+    int ans;
+    while(start<=end){
+
+        if(arr[mid]==key){
+            ans = mid;
+            end = mid - 1;
+        }else if(key<arr[mid]){
+            end = mid -1;
+
+        }else if( key> arr[mid]){
+            start = mid + 1;
+        }
+        mid = (start + end)/2;
+        }
+         return ans;
+}
+int lastOccurence(int arr[],int n , int key){
+    int start = 0 ;
+    int end  = n-1;
+    int mid = (start + end)/2;
+    int ans;
+    while(start<=end){
+
+        if(arr[mid]==key){
+            ans = mid;
+            start  = mid + 1;
+        }else if(key<arr[mid]){
+            end = mid -1;
+
+        }else if( key> arr[mid]){
+            start = mid + 1;
+        } 
+         mid = (start + end)/2;
+        }
+    return ans;  
+
+}
 
 int binarySearch(int arr[], int n, int key){
     int start = 0;
     int end = n-1;
+     int middle = (start+end)/2;
     while(start<=end){
-        int middle = (start + end);
+       
         if(key == arr [middle]){
             return middle;
         }
@@ -19,7 +116,7 @@ int binarySearch(int arr[], int n, int key){
             
         }else {
             end = middle-1;
-        }
+        }middle = (start+end)/2;
     } return -1;
 }
 
@@ -1337,8 +1434,22 @@ cout<<binarySearch(arr,7,7);
 cout<<binarySearch(arr,7,3);
 cout<<binarySearch(arr,7,-3);
 
-*/ 
 
+
+int arr[11]= {3,7,11,11,11,11,13,19,27,29,31};
+cout<<firstOccurence(arr,11,11)<<endl;
+cout<<lastOccurence(arr,11,11)<<endl;
+
+
+
+
+// int arr[5]= {8,10,17,1,3};
+// cout<<"pivot is" <<getPivot(arr,5);
+
+cout<<sqrtprecision(37,10);
+*/
+
+cout<<typeid(pow(100,100)).name();
 
 
 
