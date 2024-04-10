@@ -10,6 +10,7 @@ int main(){
     int sum=amount1+amount2;
     cout<<sum;
     cout<<"this is working";
+    cout<<"testing";
 
     return 0;
 
