@@ -4,6 +4,7 @@
 #include<math.h>
 
 //just to check
+//just to cjeck
 
 using namespace std;
 int sqrtint(int x){
