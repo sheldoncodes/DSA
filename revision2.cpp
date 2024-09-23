@@ -3,6 +3,8 @@
 #include<bits/stdc++.h>
 #include<math.h>
 
+//just to check
+
 using namespace std;
 int sqrtint(int x){
         int s = 0;
