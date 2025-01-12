@@ -68,6 +68,7 @@ node* buildusingstack(){
     
 
     int idx = 0;
+    //traversal not working
     while(!st.empty() && idx < sizeof(arr)){
         poor& top = st.top();
         if(top.state==1){
