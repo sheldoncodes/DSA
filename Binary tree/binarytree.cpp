@@ -61,7 +61,7 @@ node* buildusingstack(){
     int arr[] = {90,25,12,-1,-1,37,30,-1,-1,-1,75,62,-1,70,-1,-1,87,-1,-1};
     // notation in stack state 1=l, 2=r,3 = pop
     stack <poor> st;
-  node*  root = new node(arr[0]);
+     node*  root = new node(arr[0]);
   //  poor p = poor(root , 1);
     st.push(poor(root,1));
 
@@ -106,6 +106,8 @@ node* buildusingstack(){
 
 };
 
+
+
 /*void preordertraversal(node *root){
       queue<node*>  q;
       q.push(root);
@@ -132,19 +134,145 @@ node* buildusingstack(){
 }*/
 //
 void preordertraversal(node* root) {
+
     if (root == nullptr) return;
 
     cout << root->data << " ";
     preordertraversal(root->left);
     preordertraversal(root->right);
 }
+
+void inordertraversal(node* root){
+    if(root==NULL){
+        //cout<<root->data <<" ";
+        return;
+    }
+    inordertraversal(root->left);
+    cout<<root->data <<" ";
+    inordertraversal(root->right);
+    
+
+}
+void postordertraversal(node* root){
+    if(root==NULL){
+        return;
+    }
+    postordertraversal(root->left);
+    postordertraversal(root->right);
+    cout<<root->data<<" ";
+}
+
+void levelOrderTraversal(node* root){
+    queue<node*> q;
+    q.push(root);
+
+    while(!q.empty()){
+        int count =q.size();
+        for(int i =0; i<count;i++){
+        node* temp = q.front();
+        cout<<temp->data<<" ";
+
+        if(temp->left){
+            q.push(temp->left);
+        }
+        if(temp->right){
+            q.push(temp->right);
+        }
+        q.pop();
+
+        
+    }
+    cout<<endl;
+
+    }
+}
+
+int height(node* root) {
+        if(root==NULL){
+        return 0;
+        }
+        // code here
+        queue < node* > q;
+        int ans = 0;
+        
+        q.push(root);
+        while(!q.empty()){
+           
+            int count = q.size();
+            for(int i =0;i<count;i++){
+                node* temp = q.front();
+                q.pop();
+                if(temp->left){
+                    q.push(temp->left);
+                }
+                if(temp->right){
+                    q.push(temp->right);
+                }
+                
+                    
+            }
+            ans++;
+            
+            
+        }
+        return ans-1;
+    }
+
+int heightrecursive(node* root){
+    if(root == NULL){
+        
+        return 0;
+    }
+    int left = heightrecursive(root->left);
+    int right = heightrecursive(root->right);
+    int ans = max(left , right )+1;
+    return ans;
+}
+
+void preoderiterative(node* root){
+    stack<node*> st;
+    st.push(root);
+    while(!st.empty()){
+        node* temp = st.top();
+        cout<<temp->data<<" ";
+        st.pop();
+        if(temp->left){
+        st.push(temp->left);
+        }
+        if(temp->right){
+        st.push(temp->right);
+        }
+
+
+
+    }
+}
+
 int main(){
 
     node *obj;
     obj = buildusingstack();
+    cout<<endl;
+
+    preoderiterative(obj);
+    
+
+
+   /*cout<<"this is the height using iterative"<<height(obj);
+    cout<<endl;
+    cout<<"this is the height using recursive"<<heightrecursive(obj);
+    cout<<endl; */
+
 
    // obj = buildtree(obj);
-   preordertraversal(obj);
+  /* preordertraversal(obj);
+   cout<<endl;
+   inordertraversal(obj);
+   cout<<endl;
+   postordertraversal(obj); */
+
+   //levelOrderTraversal(obj);
+
 
 
 }
