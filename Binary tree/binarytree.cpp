@@ -231,17 +231,20 @@ int heightrecursive(node* root){
 
 void preoderiterative(node* root){
     stack<node*> st;
+
+    //we are using the stack not queue idiot
     st.push(root);
     while(!st.empty()){
         node* temp = st.top();
         cout<<temp->data<<" ";
         st.pop();
-        if(temp->left){
-        st.push(temp->left);
-        }
         if(temp->right){
         st.push(temp->right);
         }
+        if(temp->left){
+        st.push(temp->left);
+        }
+        
 
 
 
@@ -255,6 +258,9 @@ int main(){
     cout<<endl;
 
     preoderiterative(obj);
+    cout<<endl;
+    levelOrderTraversal(obj);
+    
     
 
 
