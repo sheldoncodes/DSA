@@ -251,15 +251,88 @@ void preoderiterative(node* root){
     }
 }
 
+void preOrderUsingStack(node* root){
+
+    stack<node*> st;
+    st.push(root);
+    while(!st.empty()){
+        node* temp = st.top();
+        cout<<temp->data<<" ";
+        st.pop();
+
+        if(temp->right!=NULL){
+            st.push(temp->right);
+        }
+         if(temp->left!=NULL){
+            st.push(temp->left);
+        }
+    }
+
+}
+class Poststate{
+    public:
+    node* root;
+    int state;
+
+    Poststate(node* root , int state){
+        this->root = root;
+        this->state = state;
+    }
+
+
+};
+void postOrderUsingQueue(node * root){
+     stack<Poststate> st;
+     Poststate temp=  Poststate(root,0);
+     st.push(temp);
+
+     while(!st.empty()){
+
+          temp = st.top();
+          int state = temp.state;
+          if(state==0){
+            st.top().state=1;
+            if(temp.root->left!= NULL){
+            temp.root = temp.root->left;
+            temp.state= 0;
+            st.push(temp);
+            }
+
+          }
+
+          else if(state == 1){
+            st.top().state=2;
+            if(temp.root->right!=NULL){
+            temp.root = temp.root->right;
+            temp.state= 0;
+            st.push(temp);
+            }
+
+          }
+          else{
+            cout<<temp.root->data<<"- ";
+            st.pop();
+
+          }
+     }
+     
+
+}
+
 int main(){
 
     node *obj;
     obj = buildusingstack();
     cout<<endl;
-
-    preoderiterative(obj);
+    postordertraversal(obj);
     cout<<endl;
-    levelOrderTraversal(obj);
+    postOrderUsingQueue(obj);
+
+    //preOrderUsingStack(obj);
+
+    /*preoderiterative(obj);
+    cout<<endl;
+    levelOrderTraversal(obj); */
     
     
 
