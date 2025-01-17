@@ -281,7 +281,7 @@ class Poststate{
 
 
 };
-void postOrderUsingQueue(node * root){
+void postOrderUsingStack(node * root){
      stack<Poststate> st;
      Poststate temp=  Poststate(root,0);
      st.push(temp);
