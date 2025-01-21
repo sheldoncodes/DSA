@@ -319,14 +319,82 @@ void postOrderUsingStack(node * root){
 
 }
 
+void inorderIterativeUsingStack(node* root){
+    stack<poor> st;
+    poor p = poor(root, 1);
+    st.push(p);
+
+    while(!st.empty()){
+
+         // state == 1 preorder , left 
+        if(st.top().state == 1){
+           
+            st.top().state= 2;
+            if(st.top().root->left != NULL){
+                poor temp = poor ( st.top().root->left, 1);
+                st.push(temp);
+            }
+
+        }
+
+        else if (st.top().state == 2){
+            // state == 2 inorder traversal
+             cout<<st.top().root->data << " ";
+             st.top().state = 3;
+             if(st.top().root->right != NULL){
+                poor temp = poor ( st.top().root->right, 1);
+                st.push(temp);
+            }
+
+        }
+
+        else {
+
+            // state == 3 post order
+            st.pop();
+
+        }
+
+          
+        
+
+         /*while(st.top()->left!=NULL){
+            int x = st.top()->data;
+            st.push(st.top()->left);
+
+        
+        }
+        cout<<st.top()->data;  // data ko print 
+
+        if(st.top()->right == NULL){
+            st.pop();
+          
+
+        }
+        if(st.top()->right!= NULL){
+            st.push(st.top()->right)
+        } */
+       
+      
+
+        
+
+    }
+     
+
+}
+
 int main(){
 
     node *obj;
     obj = buildusingstack();
     cout<<endl;
-    postordertraversal(obj);
+    inordertraversal(obj);
     cout<<endl;
-    postOrderUsingQueue(obj);
+    inorderIterativeUsingStack(obj);
+   // postordertraversal(obj);
+   // cout<<endl;
+   // postOrderUsingStack(obj);
 
     //preOrderUsingStack(obj);
 
