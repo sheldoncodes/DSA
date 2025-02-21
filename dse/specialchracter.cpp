@@ -7,11 +7,11 @@ bool isSpecialCharacter(char c) {
 }
 
 bool isOddDigit(char c) {
-    return (c - '0') % 2 != 0;
+    return isdigit(c) && (c - '0') % 2 != 0;
 }
 
 bool isEvenDigit(char c) {
-    return (c - '0') % 2 == 0;
+    return isdigit(c) && (c - '0') % 2 == 0;
 }
 
 std::string processString(const std::string& instr) {
