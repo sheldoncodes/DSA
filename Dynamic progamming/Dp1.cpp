@@ -63,6 +63,7 @@ int main() {
     cin >> t;
     while (t--) {
         int n;
+        char pick[7];
         cin >> n;
         Solution obj;
         long long int topDownans = obj.topDown(n);
